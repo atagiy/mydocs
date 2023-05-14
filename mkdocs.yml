@@ -1,0 +1,24 @@
+site_name: 自己紹介
+
+
+nav:
+  - 自己紹介: "index.md"
+  - 趣味: "kaggle/kaggle.md"
+
+# theme:
+#     palette:
+#       primary: 'red'
+#       accent: 'red'
+
+theme:
+    name: 'material'
+    logo: statics/4237565-kg.png
+    palette:
+        # ヘッダーの色。標準は'indigo'
+        primary: 'red'
+        # ハイライト文字の色。標準は'indigo'。
+        accent: 'green'
+    # フォント。'font: false'にするとGoogleフォントを使用しなくなる
+    font:
+        text: 'Roboto'
+        code: 'Roboto Mono'
