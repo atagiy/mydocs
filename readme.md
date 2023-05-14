@@ -1,0 +1,1 @@
+https://atagiy.github.io/mydocs/
