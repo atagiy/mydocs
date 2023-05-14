@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   deploy:
@@ -10,7 +10,6 @@ jobs:
     steps:
       - name: Build site
         run: |
-          ls
           cd .
 
       - uses: actions/checkout@v2
