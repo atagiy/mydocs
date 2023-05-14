@@ -1,0 +1,39 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Build site
+        run: |
+          ls
+          cd .
+
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+
+      - name: Update apt repository
+        run: sudo apt-get update
+
+      - name: Install Python3.10
+        run: sudo apt-get install python3.10
+
+      - name: Install pip
+        run: |
+          sudo apt-get install -y python3-pip
+          pip3 install --upgrade pip
+
+      - name: Install dependencies
+        run: |
+          pip3 install -r requirements.txt
+
+      - name: Build site
+        run: |
+          mkdocs build --clean
+
+      - run: mkdocs gh-deploy --force
