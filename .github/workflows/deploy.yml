@@ -35,4 +35,4 @@ jobs:
         run: |
           mkdocs build --clean
 
-      - run: mkdocs gh-deploy --force
+      # - run: mkdocs gh-deploy --force
